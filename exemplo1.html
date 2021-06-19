@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá, Mundo!</title>
+    <script>
+        function clickNoBotao() {
+
+            alert("Olá, mundo!")
+        }
+
+        function atualizacaoTexto(){
+
+            let input = document.getElementById("meuinput");
+            let p = document.getElementById("para");
+
+            p.textContent = input.value;
+
+            console.log("oi");
+        }
+
+    </script>
+
+    <style>
+        body{
+            background-color: #eee;
+        }
+
+        h1{
+            font-family: tahoma;
+            color: gray;
+            font-size: 32px;
+        }
+        
+        p{
+            text-align: center;
+        }
+
+        img{
+            max-width: 100%;
+            border: solid 2px black;
+            padding: 2px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .margem-minima{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .margem-minima input,
+        .margem-minima select,
+        .margem-minima button {
+            width: 50vw;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h1>Título</h1>
+        <h2>Título 2</h2>
+        <p id="para">qualquer texto</p>
+        <span>Informação</span>
+    </div>
+    <img src="borboleta.jpeg" />
+
+    <div class="margem-minima">
+        <a  href="https://google.com.br">link para o Google</a>
+    </div>
+
+    <div class="margem-minima">
+        <input id="meuinput" type="text" oninput="atualizacaoTexto()" />
+    </div>
+
+    <div class="margem-minima">
+        <select>
+            <option>Opção 1</option>
+            <option>Opção 2</option>
+            <option>Opção 3</option>
+        </select>
+    </div>
+
+    <div class="margem-minima">
+        <button onclick="clickNoBotao()">texto do botão</button>
+    </div>
+ 
+</body>
+</html>
